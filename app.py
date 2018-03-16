@@ -3,6 +3,7 @@
 import urllib
 import json
 import os
+import time
 
 from flask import Flask
 from flask import request
@@ -37,7 +38,8 @@ def makeWebhookResult(req):
     cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
 
     speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
-
+    time.sleep(15)
+    speech="You need any help Brother??"
     print("Response:")
     print(speech)
 
